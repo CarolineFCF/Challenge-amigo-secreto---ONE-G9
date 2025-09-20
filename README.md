@@ -16,6 +16,10 @@ O desafio consiste em criar um site de **Amigo Secreto** focando na logica de pr
 - **CSS** → estilos visuais
 - **JavaScript** → lógica do sorteio e manipulação da DOM
 
+## Demonstração:
+
+**Deploy disponível [aqui](https://carolinefcf.github.io/Challenge-amigo-secreto---ONE-G9/).**
+
 ## Como usar:
 
 01. Digite o nome de um amigo no campo de texto.
