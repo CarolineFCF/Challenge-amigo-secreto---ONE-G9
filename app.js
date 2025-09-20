@@ -7,17 +7,34 @@ alert ("Adicione todos os nomes que deseja sortear e depois click em 'sortear am
 
 // Função para adicionar amigo
 function adicionarAmigo() {
-    let input = document.getElementById("amigo");
-    let nome = input.value.trim();
-
+    // Pega nome do amigo
+    let adiNome = document.getElementById("amigo");
+    let nome = adiNome.value.trim();
+    // Verifica campo
     if (nome === "") {
-        alert("Digite um nome válido!");
+        alert("Por favor, insira um nome válido!");
         return;
     }
-
+    // Insere novo nome no array
     amigos.push(nome);
-    // teste saida da lista
+    // Teste saida da lista
     console.log(`Lista: ${amigos}`);
+    // Atualiza lista 
+    atualizarLista();
+    // Limpa campo
+    adiNome.value = "";
+}
 
-    input.value = "";
+// Função para atualizar a lista na tela
+function atualizarLista() {
+    // Pega tag da lista
+    let lista = document.getElementById("listaAmigos");
+    // limpa a lista antes de recriar
+    lista.innerHTML = "";
+    // Loop para inserir os amigos na lista
+    for (let i = 0; i < amigos.length; i++) {
+        let novoAmigo = document.createElement("li");
+        novoAmigo.textContent = amigos[i];
+        lista.appendChild(novoAmigo);
+    }
 }
